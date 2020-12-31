@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "BookMc",
+  "name": "Bookmark Landing",
   "icons": [
     {
       "src": "favicon.ico",

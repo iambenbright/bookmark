@@ -24,10 +24,10 @@ const typography = {
   body2: {
     fontWeight: 400,
   },
-  subTitle1: {
+  subtitle1: {
     fontWeight: 400,
   },
-  subTitle2: {
+  subtitle2: {
     fontWeight: 400,
   },
 };

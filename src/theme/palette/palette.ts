@@ -1,9 +1,9 @@
 const palette = {
-  /** soft red */
+  /** soft blue */
   primary: {
     main: 'hsl(231, 69%, 60%)',
   },
-  /** soft blue */
+  /** soft red */
   secondary: {
     main: 'hsl(0, 94%, 66%)',
   },

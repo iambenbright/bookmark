@@ -6,6 +6,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   toolbox: {
     justifyContent: 'space-between',
+    paddingLeft: 0,
+    paddingRight: 0,
   },
   brandRoot: {
     fontSize: '1.35rem',

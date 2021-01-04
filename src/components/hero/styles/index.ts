@@ -5,34 +5,24 @@ export default makeStyles((theme: Theme) => ({
     display: 'flex',
     flexDirection: 'column',
     [theme.breakpoints.up('md')]: {
+      height: 400,
       flexDirection: 'row',
-      alignItems: 'center',
+      gap: 30,
     },
   },
   heroLeft: {
+    marginTop: '-40px',
     textAlign: 'center',
-    marginTop: 120,
     flex: 1,
     [theme.breakpoints.up('sm')]: {
-      marginTop: 220,
+      marginTop: '-120px',
       '& h5': {
-        paddingRight: 50,
         fontSize: '1.75rem',
-      },
-      '& p': {
-        paddingRight: 50,
       },
     },
     [theme.breakpoints.up('md')]: {
       textAlign: 'left',
-      marginTop: 0,
-      paddingTop: 100,
-      marginRight: 20,
-    },
-    [theme.breakpoints.up('lg')]: {
-      '& h5': {
-        paddingRight: 200,
-      },
+      marginTop: 60,
     },
   },
   heroRight: {
@@ -57,27 +47,25 @@ export default makeStyles((theme: Theme) => ({
   },
   pill: {
     height: 170,
-    width: '90%',
-    position: 'absolute',
-    top: '35%',
-    right: '-10%',
+    width: '120%',
+    position: 'relative',
+    transform: 'translateX(26%) translateY(-90px)',
     zIndex: -1,
     backgroundColor: theme.palette.primary.main,
     borderTopLeftRadius: 150,
     borderBottomLeftRadius: 150,
     [theme.breakpoints.up('sm')]: {
       height: 370,
-      top: 120,
+      transform: 'translateX(26%) translateY(-200px)',
     },
     [theme.breakpoints.up('md')]: {
       height: 240,
-      width: '80%',
-      top: 80,
-      right: 0,
+      transform: 'translateX(26%) translateY(-120px)',
     },
     [theme.breakpoints.up('lg')]: {
       height: 280,
-      top: 100,
+      width: '80%',
+      transform: 'translateX(25%) translateY(-150px)',
     },
   },
 }));

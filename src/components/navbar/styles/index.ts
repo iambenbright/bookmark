@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: 'space-between',
     paddingLeft: 0,
     paddingRight: 0,
+    [theme.breakpoints.up('md')]: {
+      paddingRight: 60,
+    },
   },
   brandRoot: {
     fontSize: '1.35rem',

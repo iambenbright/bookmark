@@ -5,9 +5,11 @@ import { palette } from './palette';
 import { props } from './props';
 import { overrides } from './overrides';
 
-export default createMuiTheme({
+const customTheme = createMuiTheme({
   palette,
   typography,
   props,
   overrides,
 });
+
+export default customTheme;

@@ -4,10 +4,19 @@ export default makeStyles((theme: Theme) => ({
   hero: {
     display: 'flex',
     flexDirection: 'column',
+    marginTop: 40,
     [theme.breakpoints.up('md')]: {
+      marginTop: 80,
       height: 400,
       flexDirection: 'row',
       gap: 30,
+    },
+  },
+  tabletConstraint: {
+    [theme.breakpoints.only('sm')]: {
+      width: '55%',
+      marginLeft: 'auto',
+      marginRight: 'auto',
     },
   },
   heroLeft: {
@@ -25,6 +34,12 @@ export default makeStyles((theme: Theme) => ({
       marginTop: 60,
     },
   },
+  buttonLeft: {
+    marginRight: 8,
+    [theme.breakpoints.up('sm')]: {
+      marginRight: 15,
+    },
+  },
   heroRight: {
     position: 'relative',
     flex: 1,
@@ -35,7 +50,6 @@ export default makeStyles((theme: Theme) => ({
   illustration: {
     position: 'relative',
     paddingBottom: '50%',
-
     '& img': {
       position: 'absolute',
       top: 0,

@@ -7,6 +7,7 @@ import Container from '@material-ui/core/Container';
 // components
 import { NavBar } from '../../components/navbar';
 import { Hero } from '../../components/hero';
+import { Features } from '../../components/features';
 
 export default function Landing() {
   return (
@@ -15,6 +16,7 @@ export default function Landing() {
       <Container maxWidth="lg">
         <NavBar />
         <Hero />
+        <Features />
       </Container>
     </Fragment>
   );

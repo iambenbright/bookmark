@@ -55,7 +55,7 @@ export const overrides: Overrides = {
     },
     wrapper: {
       [theme.breakpoints.down('sm')]: {
-        width: 'min-content',
+        width: 'max-content',
         height: '100%',
         padding: 12,
       },

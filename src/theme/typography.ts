@@ -20,6 +20,10 @@ export const typography = (palette: Palette): TypographyOptions => ({
     fontWeight: 500,
     color: palette.grey['900'],
   },
+  h6: {
+    fontWeight: 500,
+    color: palette.grey['900'],
+  },
   body1: {
     fontWeight: 400,
     color: palette.grey['700'],

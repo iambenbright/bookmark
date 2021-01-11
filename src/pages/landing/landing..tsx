@@ -10,6 +10,7 @@ import { Hero } from '../../components/hero';
 import { Features } from '../../components/features';
 import { Extensions } from '../../components/extensions';
 import { FAQ } from '../../components/FAQ';
+import { Footer } from '../../components/footer';
 
 export default function Landing() {
   return (
@@ -22,6 +23,7 @@ export default function Landing() {
         <Extensions />
         <FAQ />
       </Container>
+      <Footer />
     </Fragment>
   );
 }

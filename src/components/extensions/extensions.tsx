@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -36,18 +35,16 @@ function ExtensionCard(props: IExtension) {
           </Box>
         </CardContent>
         <img src={backgroundDot} alt="background dots" />
-        <CardActionArea classes={{ root: classes.cardActionArea }}>
-          <CardActions>
-            <Button
-              variant="contained"
-              color="primary"
-              size="large"
-              classes={{ containedPrimary: classes.containedPrimary }}
-            >
-              {action}
-            </Button>
-          </CardActions>
-        </CardActionArea>
+        <CardActions classes={{ root: classes.cardActions }}>
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            classes={{ containedPrimary: classes.containedPrimary }}
+          >
+            {action}
+          </Button>
+        </CardActions>
       </Card>
     </Grid>
   );

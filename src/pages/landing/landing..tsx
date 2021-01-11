@@ -9,6 +9,7 @@ import { NavBar } from '../../components/navbar';
 import { Hero } from '../../components/hero';
 import { Features } from '../../components/features';
 import { Extensions } from '../../components/extensions';
+import { FAQ } from '../../components/FAQ';
 
 export default function Landing() {
   return (
@@ -19,6 +20,7 @@ export default function Landing() {
         <Hero />
         <Features />
         <Extensions />
+        <FAQ />
       </Container>
     </Fragment>
   );

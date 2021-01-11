@@ -29,8 +29,7 @@ export default makeStyles((theme: Theme) => ({
     paddingTop: 48,
     paddingBottom: 24,
   },
-  cardActionArea: {
-    display: 'flex',
+  cardActions: {
     justifyContent: 'center',
     paddingTop: 16,
     paddingBottom: 16,
@@ -57,7 +56,7 @@ export default makeStyles((theme: Theme) => ({
   },
   extensionWrapper: {
     [theme.breakpoints.down('sm')]: {
-      marginTop: 80,
+      marginTop: 100,
     },
   },
 }));

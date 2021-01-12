@@ -10,6 +10,8 @@ export const overrides: Overrides = {
       body: {
         position: 'relative',
         overflowX: 'hidden',
+        padding: '0 !important',
+        margin: '0 !important',
       },
     },
   },

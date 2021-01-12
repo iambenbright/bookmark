@@ -25,11 +25,7 @@ export default function Footer() {
   const classes = useStyles();
 
   return (
-    <Container
-      maxWidth="lg"
-      className={classes.container}
-      style={{ border: '2px solid red' }}
-    >
+    <Container maxWidth="lg" className={classes.container}>
       <Box className={classes.footerTop}>
         <NestedContainer className={classes.middleFixed}>
           <Typography

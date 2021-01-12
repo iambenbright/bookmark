@@ -16,10 +16,7 @@ export default function Landing() {
   return (
     <Fragment>
       <CssBaseline />
-      <Container
-        maxWidth="lg"
-        style={{ overflow: 'hidden', border: '2px solid red' }}
-      >
+      <Container maxWidth="lg" style={{ overflow: 'hidden' }}>
         <NavBar />
         <Hero />
         <Features />

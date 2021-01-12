@@ -25,60 +25,60 @@ export default function Footer() {
   const classes = useStyles();
 
   return (
-    <Box maxWidth="1440px" mx="auto" mt="100px">
+    <Container
+      maxWidth="lg"
+      className={classes.container}
+      style={{ border: '2px solid red' }}
+    >
       <Box className={classes.footerTop}>
-        <Container>
-          <NestedContainer className={classes.middleFixed}>
-            <Typography
-              variant="subtitle1"
-              classes={{ subtitle1: classes.subTitle }}
+        <NestedContainer className={classes.middleFixed}>
+          <Typography
+            variant="subtitle1"
+            classes={{ subtitle1: classes.subTitle }}
+          >
+            35,000+ ALREADY JOINED
+          </Typography>
+          <Typography variant="h5" classes={{ h5: classes.title }}>
+            Stay up-to-date with what <br /> we’re doing
+          </Typography>
+          <form className={classes.form}>
+            <TextField
+              variant="filled"
+              placeholder="Enter your email address"
+              type="text"
+              classes={{ root: classes.textFieldRoot }}
+            />
+            <Button
+              variant="contained"
+              color="secondary"
+              size="large"
+              className={classes.button}
             >
-              35,000+ ALREADY JOINED
-            </Typography>
-            <Typography variant="h5" classes={{ h5: classes.title }}>
-              Stay up-to-date with what <br /> we’re doing
-            </Typography>
-            <form className={classes.form}>
-              <TextField
-                variant="filled"
-                placeholder="Enter your email address"
-                type="text"
-                classes={{ root: classes.textFieldRoot }}
-              />
-              <Button
-                variant="contained"
-                color="secondary"
-                size="large"
-                className={classes.button}
-              >
-                Contact Us
-              </Button>
-            </form>
-          </NestedContainer>
-        </Container>
+              Contact Us
+            </Button>
+          </form>
+        </NestedContainer>
       </Box>
       <Box className={classes.footerBottom}>
-        <Container>
-          <NestedContainer>
-            <Grid container className={classes.footerBottomGridContainer}>
-              <Grid item className={classes.footerLeft}>
-                <Box>
-                  <img src={BookmarkLogo} alt="bookmark logo" />
-                </Box>
-                <List classes={{ root: classes.footerNavLinks }}>
-                  <ListItem>FEATURES</ListItem>
-                  <ListItem>PRICING</ListItem>
-                  <ListItem>CONTACT</ListItem>
-                </List>
-              </Grid>
-              <Grid item className={classes.socialIcon}>
-                <img src={FacebookIcon} alt="facebook icon" />
-                <img src={TwitterIcon} alt="twitter icon" />
-              </Grid>
+        <NestedContainer>
+          <Grid container className={classes.footerBottomGridContainer}>
+            <Grid item className={classes.footerLeft}>
+              <Box>
+                <img src={BookmarkLogo} alt="bookmark logo" />
+              </Box>
+              <List classes={{ root: classes.footerNavLinks }}>
+                <ListItem>FEATURES</ListItem>
+                <ListItem>PRICING</ListItem>
+                <ListItem>CONTACT</ListItem>
+              </List>
             </Grid>
-          </NestedContainer>
-        </Container>
+            <Grid item className={classes.socialIcon}>
+              <img src={FacebookIcon} alt="facebook icon" />
+              <img src={TwitterIcon} alt="twitter icon" />
+            </Grid>
+          </Grid>
+        </NestedContainer>
       </Box>
-    </Box>
+    </Container>
   );
 }

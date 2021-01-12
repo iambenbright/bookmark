@@ -1,6 +1,11 @@
 import { darken, makeStyles, Theme } from '@material-ui/core/styles';
 
 export default makeStyles((theme: Theme) => ({
+  container: {
+    overflow: 'hidden',
+    padding: 0,
+    marginTop: 100,
+  },
   footerBottom: {
     color: theme.palette.common.white,
     backgroundColor: darken(theme.palette.primary.main, 0.8),
@@ -62,7 +67,6 @@ export default makeStyles((theme: Theme) => ({
   },
   middleFixed: {
     minHeight: 300,
-    marginTop: 100,
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',

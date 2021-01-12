@@ -11,10 +11,17 @@ export default makeStyles((theme: Theme) => ({
     '&:nth-child(4)': {
       borderBottom: '1px solid rgba(0,0,0,0.12)',
     },
-    '&:hover': {},
   },
   accordionSummary: {
     padding: 0,
+    '&:hover': {
+      '& .MuiTypography-body1': {
+        color: theme.palette.secondary.main,
+      },
+    },
+    '&.Mui-expanded .MuiSvgIcon-root': {
+      color: theme.palette.secondary.main,
+    },
   },
   accordionDetails: {
     padding: 0,

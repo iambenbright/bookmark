@@ -34,7 +34,7 @@ export default function Footer() {
           >
             35,000+ ALREADY JOINED
           </Typography>
-          <Typography variant="h5" classes={{ h5: classes.title }}>
+          <Typography variant="h4" classes={{ h4: classes.title }}>
             Stay up-to-date with what <br /> we’re doing
           </Typography>
           <form className={classes.form}>

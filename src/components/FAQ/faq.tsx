@@ -28,10 +28,14 @@ function Expansion(props: IExpansion) {
         classes={{ root: classes.accordionSummary }}
         expandIcon={<ExpandMoreIcon color="primary" />}
       >
-        <Typography classes={{ body1: classes.body1 }}>{summary}</Typography>
+        <Typography classes={{ body1: classes.summaryBody }}>
+          {summary}
+        </Typography>
       </AccordionSummary>
-      <AccordionDetails>
-        <Typography classes={{ body1: classes.body1 }}>{details}</Typography>
+      <AccordionDetails classes={{ root: classes.accordionDetails }}>
+        <Typography classes={{ body1: classes.detailBody }}>
+          {details}
+        </Typography>
       </AccordionDetails>
     </Accordion>
   );
@@ -41,24 +45,26 @@ export default function FAQ() {
   const classes = useStyles();
 
   return (
-    <NestedContainer className={classes.tabletConstraint}>
-      <Typography variant="h5">Frequently Asked Questions</Typography>
-      <Typography>
-        Here are some of our FAQs. If you have any other questions you’d like
-        answered please feel free to email us.
-      </Typography>
-      <Box mt={5}>
-        {data.map(item => (
-          <Expansion key={item.id} {...item} />
-        ))}
+    <NestedContainer className={classes.middleFixed}>
+      <Typography variant="h4">Frequently Asked Questions</Typography>
+      <Box width="90%">
+        <Typography>
+          Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.
+        </Typography>
+        <Box mt={5}>
+          {data.map(item => (
+            <Expansion key={item.id} {...item} />
+          ))}
+        </Box>
+        <Button
+          variant="contained"
+          color="primary"
+          classes={{ containedPrimary: classes.containedPrimary }}
+        >
+          More info
+        </Button>
       </Box>
-      <Button
-        variant="contained"
-        color="primary"
-        classes={{ containedPrimary: classes.containedPrimary }}
-      >
-        More info
-      </Button>
     </NestedContainer>
   );
 }

@@ -89,7 +89,6 @@ export default makeStyles((theme: Theme) => ({
   },
   subTitle: {
     color: theme.palette.common.white,
-    fontSize: '0.7rem',
     letterSpacing: '3px',
   },
   title: {
@@ -107,6 +106,7 @@ export default makeStyles((theme: Theme) => ({
   },
   textFieldRoot: {
     marginTop: 0,
+    flex: 1,
     '& .MuiInputBase-root': {
       marginTop: 0,
     },

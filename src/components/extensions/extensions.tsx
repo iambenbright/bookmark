@@ -9,7 +9,7 @@ import CardActions from '@material-ui/core/CardActions';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
-// custom component
+// component
 import NestedContainer from '../../common/components/container';
 
 // styles
@@ -55,7 +55,7 @@ export default function Extensions() {
 
   return (
     <NestedContainer className={classes.extensionWrapper}>
-      <Typography variant="h5" className={classes.tabletConstraint}>
+      <Typography variant="h4" className={classes.tabletConstraint}>
         Download the extension
       </Typography>
       <Typography className={classes.tabletConstraint}>

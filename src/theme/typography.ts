@@ -12,11 +12,11 @@ export const typography = (palette: Palette): TypographyOptions => ({
       textAlign: 'center',
     },
   },
-  h4: {
+  h3: {
     fontWeight: 500,
     color: palette.grey['900'],
   },
-  h5: {
+  h4: {
     fontWeight: 500,
     color: palette.grey['900'],
   },

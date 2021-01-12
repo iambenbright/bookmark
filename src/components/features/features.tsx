@@ -40,10 +40,10 @@ export default function Features() {
 
   return (
     <NestedContainer style={{ marginTop: 100 }}>
-      <Typography variant="h5" className={classes.tabletConstraint}>
+      <Typography variant="h4" className={classes.middleFixed}>
         Features
       </Typography>
-      <Typography className={classes.tabletConstraint}>
+      <Typography className={classes.middleFixed}>
         Our aim is to make it quick and easy for you to access your favourite
         websites. Your bookmarks sync between your devices so you can access
         them on the go.
@@ -54,9 +54,17 @@ export default function Features() {
           onChange={handleChange}
           aria-label="bookmark features"
         >
-          <Tab label="Simple Bookmarking" {...a11yProps(0)} />
-          <Tab label="Speedy Searching" {...a11yProps(1)} />
-          <Tab label="Easy Sharing" {...a11yProps(2)} />
+          <Tab
+            label="Simple Bookmarking"
+            {...a11yProps(0)}
+            className={classes.tab}
+          />
+          <Tab
+            label="Speedy Searching"
+            {...a11yProps(1)}
+            className={classes.tab}
+          />
+          <Tab label="Easy Sharing" {...a11yProps(2)} className={classes.tab} />
         </Tabs>
         {data.map((feature, idx) => {
           return (
@@ -75,9 +83,9 @@ export default function Features() {
                     <Box className={classes.pillLeft} />
                   </Box>
                   <Box className={classes.panelRight}>
-                    <Typography variant="h5">{feature.title}</Typography>
+                    <Typography variant="h4">{feature.title}</Typography>
                     <Typography
-                      className={classes.tabletConstraint}
+                      className={classes.middleFixed}
                       classes={{ body1: classes.featureBody }}
                     >
                       {feature.body}

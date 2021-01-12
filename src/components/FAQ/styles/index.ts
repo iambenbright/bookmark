@@ -11,20 +11,30 @@ export default makeStyles((theme: Theme) => ({
     '&:nth-child(4)': {
       borderBottom: '1px solid rgba(0,0,0,0.12)',
     },
+    '&:hover': {},
   },
   accordionSummary: {
     padding: 0,
   },
-  body1: {
+  accordionDetails: {
+    padding: 0,
+  },
+  summaryBody: {
     marginTop: 0,
+    color: theme.palette.grey['900'],
+  },
+  detailBody: {
     textAlign: 'left',
   },
   containedPrimary: {
     marginTop: 50,
   },
-  tabletConstraint: {
+  middleFixed: {
     marginTop: 100,
     textAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     [theme.breakpoints.up('sm')]: {
       width: '65%',
       marginLeft: 'auto',
@@ -32,9 +42,6 @@ export default makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.up('md')]: {
       width: '55%',
-    },
-    [theme.breakpoints.up('lg')]: {
-      width: '50%',
     },
   },
 }));

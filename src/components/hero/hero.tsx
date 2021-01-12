@@ -30,12 +30,12 @@ export default function Hero() {
         </Box>
         {/* xs: Bottom; md: Left */}
         <Box className={classes.heroLeft}>
-          <Typography variant="h5" className={classes.tabletConstraint}>
+          <Typography variant="h3" className={classes.middleFixed}>
             A Simple Bookmark {isWidthUp('md', 'lg', true) && <br />} Manager
           </Typography>
           <Typography
             style={{ marginTop: '20px' }}
-            className={classes.tabletConstraint}
+            className={classes.middleFixed}
           >
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for

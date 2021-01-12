@@ -5,7 +5,7 @@ export default makeStyles((theme: Theme) => ({
     flexGrow: 1,
     marginTop: 30,
   },
-  tabletConstraint: {
+  middleFixed: {
     textAlign: 'center',
     [theme.breakpoints.up('sm')]: {
       width: '65%',
@@ -18,6 +18,9 @@ export default makeStyles((theme: Theme) => ({
     [theme.breakpoints.up('lg')]: {
       width: '45%',
     },
+  },
+  tab: {
+    fontSize: '1rem',
   },
   feature: {
     display: 'flex',

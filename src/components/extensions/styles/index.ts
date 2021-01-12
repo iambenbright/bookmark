@@ -31,8 +31,8 @@ export default makeStyles((theme: Theme) => ({
   },
   cardActions: {
     justifyContent: 'center',
-    paddingTop: 16,
-    paddingBottom: 16,
+    paddingTop: 32,
+    paddingBottom: 32,
   },
   containedPrimary: {
     padding: '10px 26px',

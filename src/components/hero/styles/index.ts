@@ -12,7 +12,7 @@ export default makeStyles((theme: Theme) => ({
       gap: 30,
     },
   },
-  tabletConstraint: {
+  middleFixed: {
     [theme.breakpoints.only('sm')]: {
       width: '55%',
       marginLeft: 'auto',

@@ -26,7 +26,7 @@ export default function Hero() {
           <Box className={classes.illustration}>
             <img src={HeroIllustration} alt="" />
           </Box>
-          <Box className={classes.pill} />
+          <Box className={classes.pillRight} />
         </Box>
         {/* xs: Bottom; md: Left */}
         <Box className={classes.heroLeft}>

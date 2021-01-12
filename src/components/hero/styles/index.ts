@@ -59,7 +59,7 @@ export default makeStyles((theme: Theme) => ({
       objectFit: 'cover',
     },
   },
-  pill: {
+  pillRight: {
     height: 170,
     width: '120%',
     position: 'relative',
@@ -78,8 +78,7 @@ export default makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.up('lg')]: {
       height: 280,
-      width: '80%',
-      transform: 'translateX(25%) translateY(-150px)',
+      transform: 'translateX(18%) translateY(-150px)',
     },
   },
 }));

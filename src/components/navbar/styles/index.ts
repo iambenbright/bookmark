@@ -33,14 +33,15 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
   },
   link: {
+    letterSpacing: 2.5,
     color: theme.palette.text.primary,
     '&:hover': {
       textDecoration: 'none',
     },
   },
   login: {
-    paddingLeft: 20,
-    paddingRight: 20,
+    paddingLeft: 32,
+    paddingRight: 32,
   },
 }));
 

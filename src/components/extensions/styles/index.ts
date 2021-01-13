@@ -31,16 +31,16 @@ export default makeStyles((theme: Theme) => ({
   },
   cardActions: {
     justifyContent: 'center',
-    paddingTop: 32,
-    paddingBottom: 32,
+    padding: 32,
   },
   containedPrimary: {
-    padding: '10px 26px',
+    padding: '12px 24px',
+    width: '100%',
   },
   body2: {
     marginTop: 5,
   },
-  tabletConstraint: {
+  middleFixed: {
     textAlign: 'center',
     [theme.breakpoints.up('sm')]: {
       width: '65%',

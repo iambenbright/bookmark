@@ -93,6 +93,7 @@ export default function Features() {
                     <Button
                       variant="contained"
                       color="primary"
+                      size="large"
                       style={{ marginTop: 30 }}
                     >
                       More info

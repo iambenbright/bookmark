@@ -38,6 +38,7 @@ export default makeStyles((theme: Theme) => ({
   },
   middleFixed: {
     marginTop: 100,
+    paddingBottom: 100,
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',

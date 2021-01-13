@@ -34,7 +34,7 @@ function ExtensionCard(props: IExtension) {
             </Typography>
           </Box>
         </CardContent>
-        <img src={backgroundDot} alt="background dots" />
+        <img src={backgroundDot} alt="background dots" width="100%" />
         <CardActions classes={{ root: classes.cardActions }}>
           <Button
             variant="contained"
@@ -55,10 +55,10 @@ export default function Extensions() {
 
   return (
     <NestedContainer className={classes.extensionWrapper}>
-      <Typography variant="h4" className={classes.tabletConstraint}>
+      <Typography variant="h4" className={classes.middleFixed}>
         Download the extension
       </Typography>
-      <Typography className={classes.tabletConstraint}>
+      <Typography className={classes.middleFixed}>
         We’ve got more browsers in the pipeline. Please do let us know if you’ve
         got a favourite you’d like us to prioritize
       </Typography>

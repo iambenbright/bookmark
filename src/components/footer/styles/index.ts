@@ -4,7 +4,6 @@ export default makeStyles((theme: Theme) => ({
   container: {
     overflow: 'hidden',
     padding: 0,
-    marginTop: 100,
   },
   footerBottom: {
     color: theme.palette.common.white,

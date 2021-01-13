@@ -13,6 +13,7 @@ export default makeStyles((theme: Theme) => ({
     },
   },
   middleFixed: {
+    marginTop: 20,
     [theme.breakpoints.only('sm')]: {
       width: '55%',
       marginLeft: 'auto',
@@ -31,7 +32,7 @@ export default makeStyles((theme: Theme) => ({
     },
     [theme.breakpoints.up('md')]: {
       textAlign: 'left',
-      marginTop: 60,
+      marginTop: 20,
     },
   },
   buttonLeft: {

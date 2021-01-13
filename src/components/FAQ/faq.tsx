@@ -60,6 +60,7 @@ export default function FAQ() {
         <Button
           variant="contained"
           color="primary"
+          size="large"
           classes={{ containedPrimary: classes.containedPrimary }}
         >
           More info

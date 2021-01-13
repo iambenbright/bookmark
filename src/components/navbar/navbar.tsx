@@ -1,6 +1,6 @@
 import React from 'react';
 
-// material-ui components
+// material-ui
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
@@ -10,7 +10,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Link from '@material-ui/core/Link';
 
-// custom-component
+// components
 import NestedContainer from '../../common/components/container';
 
 // svg
@@ -52,6 +52,7 @@ export default function NavBar() {
                   className={classes.login}
                   color="secondary"
                   variant="contained"
+                  size="large"
                 >
                   Login
                 </Button>

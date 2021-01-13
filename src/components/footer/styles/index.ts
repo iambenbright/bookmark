@@ -7,7 +7,7 @@ export default makeStyles((theme: Theme) => ({
   },
   footerBottom: {
     color: theme.palette.common.white,
-    backgroundColor: darken(theme.palette.primary.main, 0.8),
+    backgroundColor: darken(theme.palette.primary.main, 0.75),
     paddingTop: 50,
     paddingBottom: 50,
     [theme.breakpoints.up('md')]: {
@@ -46,12 +46,20 @@ export default makeStyles((theme: Theme) => ({
       marginTop: 30,
     },
     '& .MuiListItem-root': {
+      cursor: 'pointer',
       justifyContent: 'center',
       letterSpacing: 3,
       '&:not(:last-of-type)': {
         marginBottom: 15,
         [theme.breakpoints.up('md')]: {
           marginBottom: 0,
+        },
+      },
+      '& .MuiLink-root': {
+        color: theme.palette.common.white,
+        '&:hover': {
+          textDecoration: 'none',
+          color: theme.palette.secondary.main,
         },
       },
     },

@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import Link from '@material-ui/core/Link';
 
 // components
 import NestedContainer from '../../common/components/container';
@@ -63,9 +64,15 @@ export default function Footer() {
                 <img src={BookmarkLogo} alt="bookmark logo" />
               </Box>
               <List classes={{ root: classes.footerNavLinks }}>
-                <ListItem>FEATURES</ListItem>
-                <ListItem>PRICING</ListItem>
-                <ListItem>CONTACT</ListItem>
+                <ListItem>
+                  <Link>FEATURES</Link>
+                </ListItem>
+                <ListItem>
+                  <Link>PRICING</Link>
+                </ListItem>
+                <ListItem>
+                  <Link>CONTACT</Link>
+                </ListItem>
               </List>
             </Grid>
             <Grid item className={classes.socialIcon}>

@@ -33,10 +33,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
   },
   link: {
+    cursor: 'pointer',
     letterSpacing: 2.5,
     color: theme.palette.text.primary,
     '&:hover': {
       textDecoration: 'none',
+      '&.MuiLink-root': {
+        color: theme.palette.secondary.main,
+      },
     },
   },
   login: {

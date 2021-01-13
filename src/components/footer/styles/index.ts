@@ -33,10 +33,23 @@ export default makeStyles((theme: Theme) => ({
       },
     },
   },
-  socialIcon: {
-    '& img:first-of-type': {
-      marginRight: 50,
+  facebookIcon: {
+    '&:hover': {
+      color: theme.palette.secondary.main,
     },
+  },
+  twitterIcon: {
+    '&:hover': {
+      color: theme.palette.secondary.main,
+    },
+  },
+  socialIcons: {
+    minWidth: 100,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end',
+    cursor: 'pointer',
+    color: theme.palette.common.white,
     [theme.breakpoints.down('sm')]: {
       marginTop: 30,
     },

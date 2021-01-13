@@ -18,7 +18,22 @@ export const overrides: Overrides = {
   MuiButton: {
     root: {
       textTransform: 'none',
+      '&:hover$contained': {
+        backgroundColor: theme.palette.common.white,
+        outlineStyle: 'solid',
+        outlineWidth: 'thin',
+        color: theme.palette.grey['900'],
+        '&$containedPrimary': {
+          color: theme.palette.primary.main,
+        },
+        '&$containedSecondary': {
+          color: theme.palette.secondary.main,
+        },
+      },
     },
+    contained: {},
+    containedPrimary: {},
+    containedSecondary: {},
   },
   MuiTabs: {
     flexContainer: {

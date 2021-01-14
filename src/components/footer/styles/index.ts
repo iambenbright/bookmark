@@ -91,10 +91,8 @@ export default makeStyles((theme: Theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    [theme.breakpoints.down('sm')]: {
-      paddingTop: 70,
-      paddingBottom: 70,
-    },
+    paddingTop: 100,
+    paddingBottom: 100,
     [theme.breakpoints.up('sm')]: {
       width: '65%',
       marginLeft: 'auto',
@@ -116,6 +114,7 @@ export default makeStyles((theme: Theme) => ({
     color: theme.palette.common.white,
   },
   form: {
+    position: 'relative',
     marginTop: 40,
     display: 'flex',
     justifyContent: 'center',
@@ -124,7 +123,25 @@ export default makeStyles((theme: Theme) => ({
       flexDirection: 'column',
     },
   },
+  errorIcon: {
+    position: 'absolute',
+    transform: 'translateX(80px)',
+    zIndex: 10,
+  },
+  errorText: {
+    width: '100%',
+    fontSize: '0.9rem',
+    position: 'absolute',
+    bottom: '-22px',
+    left: 0,
+    backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.common.white,
+    borderRadius: 4,
+    padding: '2px 10px',
+    fontStyle: 'italic',
+  },
   textFieldRoot: {
+    position: 'relative',
     marginTop: 0,
     flex: 1,
     '& .MuiInputBase-root': {

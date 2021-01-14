@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // material-ui
 import Box from '@material-ui/core/Box';
@@ -11,6 +11,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Link from '@material-ui/core/Link';
 import SvgIcon from '@material-ui/core/SvgIcon';
+import { useTheme } from '@material-ui/core';
 
 // components
 import NestedContainer from '../../common/components/container';
@@ -50,8 +51,45 @@ const TwitterIcon = function () {
   );
 };
 
+const InputErrorIcon = function () {
+  const classes = useStyles();
+
+  return (
+    <SvgIcon className={classes.errorIcon}>
+      <g fill="none" fill-rule="evenodd">
+        <circle cx="10" cy="10" r="10" fill="#FA5959" />
+        <g fill="#FFF" transform="translate(9 5)">
+          <rect width="2" height="7" rx="1" />
+          <rect width="2" height="2" y="8" rx="1" />
+        </g>
+      </g>
+    </SvgIcon>
+  );
+};
+
 export default function Footer() {
   const classes = useStyles();
+  const theme = useTheme();
+  const [email, setEmail] = useState<string>('');
+  const [isValid, setIsValid] = useState<boolean | null>(null);
+
+  const validateEmail = (event: React.FormEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    // minimum eight characters, at least one letter and one number
+    const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    const isEmail = pattern.test(email.toLowerCase());
+
+    if (isEmail) {
+      setIsValid(true);
+    } else {
+      setIsValid(false);
+    }
+  };
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
 
   return (
     <Container maxWidth="lg" className={classes.container}>
@@ -67,13 +105,30 @@ export default function Footer() {
             Stay up-to-date with what <br /> we’re doing
           </Typography>
           <form className={classes.form}>
+            {isValid ? null : <InputErrorIcon />}
             <TextField
+              classes={{ root: classes.textFieldRoot }}
               variant="filled"
               placeholder="Enter your email address"
-              type="text"
-              classes={{ root: classes.textFieldRoot }}
+              type="email"
+              value={email}
+              onChange={handleChange}
+              helperText={
+                isValid ? null : (
+                  <Typography component="span" className={classes.errorText}>
+                    Whoops, make sure it's an email
+                  </Typography>
+                )
+              }
+              style={{
+                outline: isValid
+                  ? ''
+                  : `${theme.palette.secondary.main} outset thin`,
+              }}
             />
             <Button
+              type="submit"
+              onClick={validateEmail}
               variant="contained"
               color="secondary"
               size="large"

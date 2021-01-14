@@ -35,8 +35,17 @@ export default makeStyles((theme: Theme) => ({
       marginTop: 20,
     },
   },
+  heroButtons: {
+    marginTop: 30,
+  },
   buttonLeft: {
-    marginRight: 8,
+    [theme.breakpoints.down('xs')]: {
+      marginBottom: 20,
+    },
+    [theme.breakpoints.up(425)]: {
+      marginBottom: 0,
+      marginRight: 10,
+    },
     [theme.breakpoints.up('sm')]: {
       marginRight: 15,
     },

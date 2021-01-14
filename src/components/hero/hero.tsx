@@ -4,7 +4,8 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import { isWidthUp } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 // components
 import NestedContainer from '../../common/components/container';
@@ -17,6 +18,9 @@ import useStyles from './styles';
 
 export default function Hero() {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMedUp = useMediaQuery(theme.breakpoints.up('md'));
+  const isLargeUp = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
     <NestedContainer>
@@ -29,14 +33,14 @@ export default function Hero() {
         </Box>
         <Box className={classes.heroLeft}>
           <Typography variant="h3" className={classes.middleFixed}>
-            A Simple Bookmark {isWidthUp('md', 'lg', true) && <br />} Manager
+            A Simple Bookmark {isMedUp && <br />} Manager
           </Typography>
           <Typography className={classes.middleFixed}>
             A clean and simple interface to organize your favourite websites.
-            Open a new browser tab and see your sites load instantly.{' '}
-            {isWidthUp('md', 'lg', true) && <br />}Try it for free.
+            Open a new browser tab and see your sites load instantly.
+            {isLargeUp && <br />} Try it for free.
           </Typography>
-          <Box mt="30px">
+          <Box className={classes.heroButtons}>
             <Button
               variant="contained"
               color="primary"

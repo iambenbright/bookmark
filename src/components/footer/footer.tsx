@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 // material-ui
 import Box from '@material-ui/core/Box';
@@ -11,7 +11,9 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Link from '@material-ui/core/Link';
 import SvgIcon from '@material-ui/core/SvgIcon';
-import { useTheme } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Fade from '@material-ui/core/Fade';
 
 // components
 import NestedContainer from '../../common/components/container';
@@ -56,7 +58,7 @@ const InputErrorIcon = function () {
 
   return (
     <SvgIcon className={classes.errorIcon}>
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <circle cx="10" cy="10" r="10" fill="#FA5959" />
         <g fill="#FFF" transform="translate(9 5)">
           <rect width="2" height="7" rx="1" />
@@ -68,14 +70,20 @@ const InputErrorIcon = function () {
 };
 
 export default function Footer() {
-  const classes = useStyles();
   const theme = useTheme();
+  const isMobileOrTablet = useMediaQuery(theme.breakpoints.down('sm'));
   const [email, setEmail] = useState<string>('');
-  const [isValid, setIsValid] = useState<boolean | null>(null);
+  const [isValid, setIsValid] = useState<boolean>(true);
+  const classes = useStyles();
+  const spanRef = useRef().current;
 
   const validateEmail = (event: React.FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    // minimum eight characters, at least one letter and one number
+
+    if (email.length === 0) {
+      return;
+    }
+
     const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     const isEmail = pattern.test(email.toLowerCase());
@@ -105,7 +113,11 @@ export default function Footer() {
             Stay up-to-date with what <br /> we’re doing
           </Typography>
           <form className={classes.form}>
-            {isValid ? null : <InputErrorIcon />}
+            {!isValid && (
+              <Fade in={!isValid}>
+                <InputErrorIcon />
+              </Fade>
+            )}
             <TextField
               classes={{ root: classes.textFieldRoot }}
               variant="filled"
@@ -114,16 +126,22 @@ export default function Footer() {
               value={email}
               onChange={handleChange}
               helperText={
-                isValid ? null : (
-                  <Typography component="span" className={classes.errorText}>
-                    Whoops, make sure it's an email
-                  </Typography>
+                !isValid && (
+                  <Fade in={!isValid}>
+                    <Typography
+                      ref={spanRef}
+                      component="span"
+                      className={classes.errorText}
+                    >
+                      Whoops, make sure it's an email
+                    </Typography>
+                  </Fade>
                 )
               }
               style={{
-                outline: isValid
-                  ? ''
-                  : `${theme.palette.secondary.main} outset thin`,
+                outline: !isValid
+                  ? `${theme.palette.secondary.main} outset thin`
+                  : '',
               }}
             />
             <Button
@@ -132,7 +150,8 @@ export default function Footer() {
               variant="contained"
               color="secondary"
               size="large"
-              className={classes.button}
+              className={classes.contactUs}
+              style={{ marginTop: isMobileOrTablet ? (isValid ? 0 : 40) : 0 }}
             >
               Contact Us
             </Button>

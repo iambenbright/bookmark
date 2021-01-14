@@ -125,8 +125,20 @@ export default makeStyles((theme: Theme) => ({
   },
   errorIcon: {
     position: 'absolute',
-    transform: 'translateX(80px)',
     zIndex: 10,
+    transform: 'translatex(140px) translateY(-40px)',
+    [theme.breakpoints.up(423)]: {
+      transform: 'translatex(160px) translateY(-40px)',
+    },
+    [theme.breakpoints.up('sm')]: {
+      transform: 'translatex(200px) translateY(-40px)',
+    },
+    [theme.breakpoints.up('md')]: {
+      transform: 'translatex(70px) translateY(0)',
+    },
+    [theme.breakpoints.up('lg')]: {
+      transform: 'translateX(80px)',
+    },
   },
   errorText: {
     width: '100%',
@@ -164,7 +176,7 @@ export default makeStyles((theme: Theme) => ({
       marginRight: 10,
     },
   },
-  button: {
+  contactUs: {
     [theme.breakpoints.down('sm')]: {
       width: '100%',
       marginTop: 10,

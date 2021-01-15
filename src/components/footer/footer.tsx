@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 // material-ui
 import Box from '@material-ui/core/Box';
@@ -11,7 +11,6 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Link from '@material-ui/core/Link';
 import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Fade from '@material-ui/core/Fade';
 
 // components
@@ -27,12 +26,9 @@ import useStyles from './styles';
 export default function Footer() {
   const [email, setEmail] = useState<string>('');
   const [isValid, setIsValid] = useState<boolean>(true);
-  const spanRef = useRef().current;
-  const svgRef = useRef().current;
 
   const theme = useTheme();
   const classes = useStyles();
-  const isMobileOrTablet = useMediaQuery(theme.breakpoints.down('sm'));
 
   const validateEmail = (event: React.FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -80,7 +76,6 @@ export default function Footer() {
                   width="20"
                   height="20"
                   className={classes.errorIcon}
-                  ref={svgRef}
                 >
                   <g fill="none" fillRule="evenodd">
                     <circle cx="10" cy="10" r="10" fill="#FA5959" />
@@ -99,10 +94,11 @@ export default function Footer() {
               type="email"
               value={email}
               onChange={handleChange}
+              InputProps={{ disableUnderline: true }}
               helperText={
                 !isValid && (
                   <Fade in={!isValid}>
-                    <span ref={spanRef} className={classes.errorText}>
+                    <span className={classes.errorText}>
                       Whoops, make sure it's an email
                     </span>
                   </Fade>
@@ -121,7 +117,6 @@ export default function Footer() {
               color="secondary"
               size="large"
               className={classes.contactUs}
-              style={{ marginTop: isMobileOrTablet ? (isValid ? 0 : 40) : 0 }}
             >
               Contact Us
             </Button>

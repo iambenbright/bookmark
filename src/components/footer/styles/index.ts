@@ -153,6 +153,7 @@ export default makeStyles((theme: Theme) => ({
     fontStyle: 'italic',
   },
   textFieldRoot: {
+    width: '100%',
     position: 'relative',
     marginTop: 0,
     flex: 1,
@@ -162,24 +163,21 @@ export default makeStyles((theme: Theme) => ({
     '& .MuiFilledInput': {
       '&-input': {
         backgroundColor: theme.palette.common.white,
-        padding: '12px 12px',
+        padding: '12px 48px 12px 12px',
         borderRadius: 4,
       },
-      '&-underline:after, &-underline:before': {
-        display: 'none',
-      },
-    },
-    [theme.breakpoints.down('sm')]: {
-      width: '100%',
     },
     [theme.breakpoints.up('md')]: {
       marginRight: 10,
+      width: 'auto',
     },
   },
   contactUs: {
-    [theme.breakpoints.down('sm')]: {
-      width: '100%',
-      marginTop: 10,
+    marginTop: 30,
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      marginTop: 0,
+      width: 'auto',
     },
   },
 }));

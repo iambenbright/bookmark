@@ -56,6 +56,9 @@ export default function Footer() {
     setEmail(event.target.value);
   };
 
+  const preventDefault = (event: React.SyntheticEvent) =>
+    event.preventDefault();
+
   return (
     <Container maxWidth="lg" className={classes.container}>
       <Box className={classes.footerTop}>
@@ -134,13 +137,19 @@ export default function Footer() {
               </Box>
               <List classes={{ root: classes.footerNavLinks }}>
                 <ListItem>
-                  <Link>FEATURES</Link>
+                  <Link href="/features" onClick={preventDefault}>
+                    FEATURES
+                  </Link>
                 </ListItem>
                 <ListItem>
-                  <Link>PRICING</Link>
+                  <Link href="/pricing" onClick={preventDefault}>
+                    PRICING
+                  </Link>
                 </ListItem>
                 <ListItem>
-                  <Link>CONTACT</Link>
+                  <Link href="/contact" onClick={preventDefault}>
+                    CONTACT
+                  </Link>
                 </ListItem>
               </List>
             </Grid>

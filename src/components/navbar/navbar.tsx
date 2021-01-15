@@ -22,6 +22,9 @@ import useStyles from './styles';
 export default function NavBar() {
   const classes = useStyles();
 
+  const preventDefault = (event: React.SyntheticEvent) =>
+    event.preventDefault();
+
   return (
     <AppBar
       className={classes.root}
@@ -39,17 +42,29 @@ export default function NavBar() {
           <Hidden smDown>
             <List className={classes.list}>
               <ListItem>
-                <Link href="#" className={classes.link}>
+                <Link
+                  href="/features"
+                  onClick={preventDefault}
+                  className={classes.link}
+                >
                   FEATURES
                 </Link>
               </ListItem>
               <ListItem>
-                <Link href="#" className={classes.link}>
+                <Link
+                  href="/pricing"
+                  onClick={preventDefault}
+                  className={classes.link}
+                >
                   PRICING
                 </Link>
               </ListItem>
               <ListItem>
-                <Link href="#" className={classes.link}>
+                <Link
+                  href="/contact"
+                  onClick={preventDefault}
+                  className={classes.link}
+                >
                   CONTACT
                 </Link>
               </ListItem>

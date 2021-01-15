@@ -26,7 +26,7 @@ function ExtensionCard(props: IExtension) {
     <Grid item xs={12} sm={6} md={4} className={classes.cardWrapper}>
       <Card classes={{ root: classes.card }}>
         <CardContent classes={{ root: classes.cardContent }}>
-          <img src={image} alt="google chrome" />
+          <img src={image} alt="google chrome" width="102" height="100" />
           <Box mt={3}>
             <Typography variant="h6">{title}</Typography>
             <Typography variant="body2" classes={{ body2: classes.body2 }}>
@@ -34,7 +34,12 @@ function ExtensionCard(props: IExtension) {
             </Typography>
           </Box>
         </CardContent>
-        <img src={backgroundDot} alt="background dots" width="100%" />
+        <img
+          src={backgroundDot}
+          alt="background dots"
+          width="100%"
+          height="4"
+        />
         <CardActions classes={{ root: classes.cardActions }}>
           <Button
             variant="contained"

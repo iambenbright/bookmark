@@ -39,13 +39,19 @@ export default function NavBar() {
           <Hidden smDown>
             <List className={classes.list}>
               <ListItem>
-                <Link className={classes.link}>FEATURES</Link>
+                <Link href="#" className={classes.link}>
+                  FEATURES
+                </Link>
               </ListItem>
               <ListItem>
-                <Link className={classes.link}>PRICING</Link>
+                <Link href="#" className={classes.link}>
+                  PRICING
+                </Link>
               </ListItem>
               <ListItem>
-                <Link className={classes.link}>CONTACT</Link>
+                <Link href="#" className={classes.link}>
+                  CONTACT
+                </Link>
               </ListItem>
               <ListItem>
                 <Button

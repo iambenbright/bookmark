@@ -1,6 +1,6 @@
 # Bookmark
 
-An interface to organize your favourite websites.
+An interface to organize your favourite websites.<br />
 Template built with react and material-ui, designed by Frontend Mentor.
 
 ## Demo

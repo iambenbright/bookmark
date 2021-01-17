@@ -6,6 +6,15 @@ export default makeStyles((theme: Theme) => ({
       marginRight: 20,
     },
   },
+  bottomNav: {
+    [theme.breakpoints.down('sm')]: {
+      marginTop: 20,
+      '& a:not(:last-of-type)': {
+        marginRight: 0,
+        marginBottom: 20,
+      },
+    },
+  },
   link: {
     cursor: 'pointer',
     letterSpacing: 2.5,
@@ -17,7 +26,10 @@ export default makeStyles((theme: Theme) => ({
       },
     },
   },
-  bottomNav: {
+  bottomLink: {
     color: theme.palette.common.white,
+    [theme.breakpoints.down('sm')]: {
+      display: 'block',
+    },
   },
 }));

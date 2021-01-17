@@ -20,13 +20,13 @@ export default function NavLinks(props: LinkProps) {
     event.preventDefault();
 
   return (
-    <nav className={classes.nav}>
+    <nav className={`${classes.nav} ${atBottom ? classes.bottomNav : ''}`}>
       {links.map((link, idx) => (
         <Link
           key={idx}
           href={`/${link}`}
           onClick={preventDefault}
-          className={`${classes.link} ${atBottom ? classes.bottomNav : ''}`}
+          className={`${classes.link} ${atBottom ? classes.bottomLink : ''}`}
         >
           {link}
         </Link>

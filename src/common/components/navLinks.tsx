@@ -2,7 +2,6 @@ import React from 'react';
 
 // material-ui
 import Link from '@material-ui/core/Link';
-import { useTheme } from '@material-ui/core';
 
 // styles
 import useStyles from './styles';
@@ -15,8 +14,6 @@ interface LinkProps {
 
 export default function NavLinks(props: LinkProps) {
   const classes = useStyles();
-  const theme = useTheme();
-
   const { atBottom } = props;
 
   const preventDefault = (event: React.SyntheticEvent) =>

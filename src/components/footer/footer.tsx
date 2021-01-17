@@ -12,6 +12,7 @@ import ListItem from '@material-ui/core/ListItem';
 import Link from '@material-ui/core/Link';
 import { useTheme } from '@material-ui/core/styles';
 import Fade from '@material-ui/core/Fade';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 // components
 import NestedContainer from '../../common/components/container';
@@ -29,6 +30,7 @@ export default function Footer() {
 
   const theme = useTheme();
   const classes = useStyles();
+  const matchesMD = useMediaQuery(theme.breakpoints.up('md'));
 
   const validateEmail = (event: React.FormEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -66,7 +68,7 @@ export default function Footer() {
             35,000+ ALREADY JOINED
           </Typography>
           <Typography variant="h4" classes={{ h4: classes.title }}>
-            Stay up-to-date with what <br /> we’re doing
+            Stay up-to-date with what {matchesMD && <br />} we’re doing
           </Typography>
           <form className={classes.form}>
             {!isValid && (

@@ -4,7 +4,6 @@ import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-import MenuIcon from '@material-ui/icons/Menu';
 import Hidden from '@material-ui/core/Hidden';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -15,6 +14,7 @@ import NestedContainer from '../../common/components/container';
 
 // svg
 import BookmarkLogo from '../../assets/images/logo-bookmark.svg';
+import HamburgerIcon from '../../assets/images/icon-hamburger.svg';
 
 // styles
 import useStyles from './styles';
@@ -34,10 +34,15 @@ export default function NavBar() {
     >
       <NestedContainer>
         <Toolbar className={classes.toolbox}>
-          {/* brand log */}
-          <img src={BookmarkLogo} alt="" />
+          <img src={BookmarkLogo} width="148" height="25" alt="bookmark logo" />
           <Hidden mdUp>
-            <MenuIcon style={{ fontSize: '40px' }} />
+            <img
+              src={HamburgerIcon}
+              width="18"
+              height="15"
+              alt="hamburger icon"
+              style={{ cursor: 'pointer' }}
+            />
           </Hidden>
           <Hidden smDown>
             <List className={classes.list}>

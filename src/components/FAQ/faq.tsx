@@ -8,8 +8,10 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Box from '@material-ui/core/Box';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { useTheme } from '@material-ui/core/styles';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-// custom components
+// components
 import NestedContainer from '../../common/components/container';
 
 // styles
@@ -18,8 +20,19 @@ import useStyles from './styles';
 // data
 import { data, IExpansion } from './data';
 
+const MAX_STRING_LENGTH = 25;
+function truncate(value: string): string {
+  if (value.length > MAX_STRING_LENGTH) {
+    return value.slice(0, MAX_STRING_LENGTH) + '...';
+  }
+  return value;
+}
+
 function Expansion(props: IExpansion) {
   const classes = useStyles();
+  const theme = useTheme();
+  const isSM = useMediaQuery(theme.breakpoints.down(600));
+
   const { summary, details } = props;
 
   return (
@@ -29,7 +42,7 @@ function Expansion(props: IExpansion) {
         expandIcon={<ExpandMoreIcon color="primary" />}
       >
         <Typography classes={{ body1: classes.summaryBody }}>
-          {summary}
+          {isSM ? truncate(summary) : summary}
         </Typography>
       </AccordionSummary>
       <AccordionDetails classes={{ root: classes.accordionDetails }}>

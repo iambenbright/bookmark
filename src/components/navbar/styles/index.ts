@@ -29,17 +29,13 @@ const useStyles = makeStyles((theme: Theme) => ({
   brandLogo: {
     fill: theme.palette.common.white,
   },
-  list: {
+  navbarRight: {
     display: 'flex',
-  },
-  link: {
-    cursor: 'pointer',
-    letterSpacing: 2.5,
-    color: theme.palette.text.primary,
-    '&:hover': {
-      textDecoration: 'none',
-      '&.MuiLink-root': {
-        color: theme.palette.secondary.main,
+    alignItems: 'center',
+    '& nav': {
+      marginRight: 30,
+      '& > a:not(:last-of-type)': {
+        marginRight: 30,
       },
     },
   },

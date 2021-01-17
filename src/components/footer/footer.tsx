@@ -7,9 +7,6 @@ import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import Link from '@material-ui/core/Link';
 import { useTheme } from '@material-ui/core/styles';
 import Fade from '@material-ui/core/Fade';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -17,6 +14,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 // components
 import NestedContainer from '../../common/components/container';
 import { FacebookIcon, TwitterIcon } from './components';
+import NavLinks from '../../common/components/navLinks';
 
 // svgs
 import BookmarkLogo from '../../assets/images/logo-bookmark-white.svg';
@@ -53,9 +51,6 @@ export default function Footer() {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
   };
-
-  const preventDefault = (event: React.SyntheticEvent) =>
-    event.preventDefault();
 
   return (
     <Container maxWidth="lg" className={classes.container}>
@@ -132,23 +127,7 @@ export default function Footer() {
               <Box>
                 <img src={BookmarkLogo} alt="bookmark logo" />
               </Box>
-              <List classes={{ root: classes.footerNavLinks }}>
-                <ListItem>
-                  <Link href="/features" onClick={preventDefault}>
-                    FEATURES
-                  </Link>
-                </ListItem>
-                <ListItem>
-                  <Link href="/pricing" onClick={preventDefault}>
-                    PRICING
-                  </Link>
-                </ListItem>
-                <ListItem>
-                  <Link href="/contact" onClick={preventDefault}>
-                    CONTACT
-                  </Link>
-                </ListItem>
-              </List>
+              <NavLinks atBottom={true} />
             </Grid>
             <Grid item className={classes.socialIcons}>
               <FacebookIcon />

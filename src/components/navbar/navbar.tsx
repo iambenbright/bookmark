@@ -5,12 +5,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import Link from '@material-ui/core/Link';
 
 // components
 import NestedContainer from '../../common/components/container';
+import NavLinks from '../../common/components/navLinks';
 
 // svg
 import BookmarkLogo from '../../assets/images/logo-bookmark.svg';
@@ -21,9 +19,6 @@ import useStyles from './styles';
 
 export default function NavBar() {
   const classes = useStyles();
-
-  const preventDefault = (event: React.SyntheticEvent) =>
-    event.preventDefault();
 
   return (
     <AppBar
@@ -45,45 +40,17 @@ export default function NavBar() {
             />
           </Hidden>
           <Hidden smDown>
-            <List className={classes.list}>
-              <ListItem>
-                <Link
-                  href="/features"
-                  onClick={preventDefault}
-                  className={classes.link}
-                >
-                  FEATURES
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link
-                  href="/pricing"
-                  onClick={preventDefault}
-                  className={classes.link}
-                >
-                  PRICING
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Link
-                  href="/contact"
-                  onClick={preventDefault}
-                  className={classes.link}
-                >
-                  CONTACT
-                </Link>
-              </ListItem>
-              <ListItem>
-                <Button
-                  className={classes.login}
-                  color="secondary"
-                  variant="contained"
-                  size="large"
-                >
-                  Login
-                </Button>
-              </ListItem>
-            </List>
+            <div className={classes.navbarRight}>
+              <NavLinks />
+              <Button
+                className={classes.login}
+                color="secondary"
+                variant="contained"
+                size="large"
+              >
+                Login
+              </Button>
+            </div>
           </Hidden>
         </Toolbar>
       </NestedContainer>

@@ -15,6 +15,21 @@ export default makeStyles((theme: Theme) => ({
       },
     },
   },
+  mobileNav: {
+    '& a': {
+      color: theme.palette.common.white,
+      display: 'block',
+      padding: '18px 100px',
+      letterSpacing: '3px',
+      '&:not(:last-of-type)': {
+        marginRight: 0,
+      },
+      '&:first-child, &:last-child': {
+        borderTop: `0.5px solid rgba(255,255,255,0.25)`,
+        borderBottom: `0.5px solid rgba(255,255,255,0.25)`,
+      },
+    },
+  },
   link: {
     cursor: 'pointer',
     letterSpacing: 2.5,

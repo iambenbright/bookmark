@@ -53,6 +53,19 @@ const useStyles = makeStyles((theme: Theme) => ({
       borderColor: theme.palette.secondary.main,
     },
   },
+  socialIcons: {
+    color: theme.palette.common.white,
+    width: '100%',
+    position: 'absolute',
+    left: 0,
+    bottom: 50,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    '& svg:first-of-type': {
+      marginRight: 30,
+    },
+  },
 }));
 
 export default useStyles;

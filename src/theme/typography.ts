@@ -31,6 +31,11 @@ export const typography = (palette: Palette): TypographyOptions => ({
     color: palette.grey['700'],
     marginTop: 20,
   },
+  body2: {
+    fontWeight: 400,
+    color: palette.grey['700'],
+    marginTop: 20,
+  },
   subtitle1: {
     fontWeight: 400,
     color: palette.grey['800'],

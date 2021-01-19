@@ -12,9 +12,8 @@ import Fade from '@material-ui/core/Fade';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 // components
-import NestedContainer from '../../common/components/container';
-import { FacebookIcon, TwitterIcon } from './components';
-import NavLinks from '../../common/components/navLinks';
+import { NestedContainer, FacebookIcon, TwitterIcon } from '../../common';
+import NavLinks from '../../common/navLinks';
 
 // svgs
 import BookmarkLogo from '../../assets/images/logo-bookmark-white.svg';

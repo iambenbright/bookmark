@@ -1,7 +1,7 @@
 import SvgIcon from '@material-ui/core/SvgIcon';
-import useStyles from '../styles';
+import useStyles from './styles';
 
-export const TwitterIcon = function () {
+export default function TwitterIcon() {
   const classes = useStyles();
 
   return (
@@ -13,4 +13,4 @@ export const TwitterIcon = function () {
       />
     </SvgIcon>
   );
-};
+}

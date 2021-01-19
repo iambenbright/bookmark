@@ -32,7 +32,7 @@ export default makeStyles((theme: Theme) => ({
   },
   link: {
     cursor: 'pointer',
-    letterSpacing: 2.5,
+    letterSpacing: 1.5,
     color: theme.palette.grey['800'],
     '&:hover': {
       textDecoration: 'none',
@@ -45,6 +45,16 @@ export default makeStyles((theme: Theme) => ({
     color: theme.palette.common.white,
     [theme.breakpoints.down('sm')]: {
       display: 'block',
+    },
+  },
+  facebookIcon: {
+    '&:hover': {
+      color: theme.palette.secondary.main,
+    },
+  },
+  twitterIcon: {
+    '&:hover': {
+      color: theme.palette.secondary.main,
     },
   },
 }));

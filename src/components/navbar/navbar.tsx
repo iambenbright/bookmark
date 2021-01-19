@@ -8,8 +8,12 @@ import Hidden from '@material-ui/core/Hidden';
 import Backdrop from '@material-ui/core/Backdrop';
 
 // components
-import NestedContainer from '../../common/components/container';
-import NavLinks from '../../common/components/navLinks';
+import {
+  NestedContainer,
+  NavLinks,
+  FacebookIcon,
+  TwitterIcon,
+} from '../../common';
 
 // svg
 import BookmarkLogo from '../../assets/images/logo-bookmark.svg';
@@ -40,6 +44,10 @@ function MobileNavigation(props: NavProps) {
       >
         LOGIN
       </Button>
+      <div className={classes.socialIcons}>
+        <FacebookIcon />
+        <TwitterIcon />
+      </div>
     </div>
   );
 }

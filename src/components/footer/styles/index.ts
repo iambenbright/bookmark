@@ -11,8 +11,8 @@ export default makeStyles((theme: Theme) => ({
     paddingTop: 50,
     paddingBottom: 50,
     [theme.breakpoints.up('md')]: {
-      paddingTop: 10,
-      paddingBottom: 10,
+      paddingTop: 30,
+      paddingBottom: 30,
     },
   },
   footerBottomGridContainer: {
@@ -33,16 +33,7 @@ export default makeStyles((theme: Theme) => ({
       },
     },
   },
-  facebookIcon: {
-    '&:hover': {
-      color: theme.palette.secondary.main,
-    },
-  },
-  twitterIcon: {
-    '&:hover': {
-      color: theme.palette.secondary.main,
-    },
-  },
+
   socialIcons: {
     minWidth: 100,
     display: 'flex',
@@ -59,9 +50,7 @@ export default makeStyles((theme: Theme) => ({
       marginTop: 30,
     },
     '& .MuiListItem-root': {
-      cursor: 'pointer',
       justifyContent: 'center',
-      letterSpacing: 3,
       '&:not(:last-of-type)': {
         marginBottom: 15,
         [theme.breakpoints.up('md')]: {

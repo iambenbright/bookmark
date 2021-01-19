@@ -12,7 +12,7 @@ import { useTheme } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 // components
-import NestedContainer from '../../common/components/container';
+import { NestedContainer } from '../../common';
 
 // styles
 import useStyles from './styles';

@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 
 // custom component
-import NestedContainer from '../../common/components/container';
+import { NestedContainer } from '../../common';
 import { TabPanel } from './tabPanel';
 
 // svg

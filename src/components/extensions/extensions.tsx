@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 // component
-import NestedContainer from '../../common/components/container';
+import { NestedContainer } from '../../common';
 
 // styles
 import useStyles from './styles';

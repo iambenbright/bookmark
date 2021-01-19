@@ -22,7 +22,7 @@ export const overrides: Overrides = {
         backgroundColor: theme.palette.common.white,
         outlineStyle: 'solid',
         outlineWidth: 'thin',
-        color: theme.palette.grey['900'],
+        color: 'currentColor',
         '&$containedPrimary': {
           color: theme.palette.primary.main,
         },

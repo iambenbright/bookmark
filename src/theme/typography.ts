@@ -13,10 +13,12 @@ export const typography = (palette: Palette): TypographyOptions => ({
     },
   },
   h3: {
+    fontSize: '2rem',
     fontWeight: 500,
     color: palette.grey['900'],
   },
   h4: {
+    fontSize: '1.7rem',
     fontWeight: 500,
     color: palette.grey['900'],
   },
@@ -29,16 +31,7 @@ export const typography = (palette: Palette): TypographyOptions => ({
     color: palette.grey['700'],
     marginTop: 20,
   },
-  body2: {
-    fontWeight: 400,
-    color: palette.grey['700'],
-    marginTop: 20,
-  },
   subtitle1: {
-    fontWeight: 400,
-    color: palette.grey['800'],
-  },
-  subtitle2: {
     fontWeight: 400,
     color: palette.grey['800'],
   },
